@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    <title>Ask question</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+          crossorigin="anonymous"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
+        />
+        <!-- Google Fonts Roboto -->
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+        />
+        <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Material Design Bootstrap -->
+        <link rel="stylesheet" href="css/mdb.min.css" />
+        <!-- Your custom styles (optional) -->
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        />
+
+    {% endblock %}
+
+    {% block style %}
+      .button_row {
+        height: 100%;
+        width: 100%;
+        padding-top: 15%;
+      }
+      .btn {
+        height: 24vh;
+        background-color: #65088a;
+        opacity: 0.8;
+        font-size: 2.7em;
+        border-radius: 16px;
+        color: white;
+        font-family: 'Baloo Tammudu 2', Sans-serif;
+      }
+      .btn:hover {
+        background-color: #9c23cc;
+        color: white;
+        font-family: 'Baloo Tammudu 2', Sans-serif;
+      }
+    {% endblock %}
+
+    {% block body %}
+    <form method="post">
+    {% csrf_token %}
+    <!-- please fix - for some reason now a form tag is added - which is needed for backend - it is no longer central -->
+    <div class="button_row row justify-content-around">
+        <button name="mark" class="btn col-4">Request Marking</button>
+        <button name="question" class="btn col-4">Ask a Question</button>
+    </div>
+    </form>
+    {% endblock %}

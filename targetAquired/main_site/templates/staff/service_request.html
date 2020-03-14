@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    <title>Helping user</title>
+
+    {% endblock %}
+
+    {% block style %}
+    {% endblock %}
+
+    {% block body %}
+    <h1>{{ student }}</h1>
+    <p>{{ problem }}</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="complete" class="btn btn-primary">Complete</button>
+        <button type="submit" name="help" class="btn btn-primary">Additional help required</button>
+        <button type="submit" name="give_up" class="btn btn-primary">Can't help</button>
+    </form>
+    {% endblock %}

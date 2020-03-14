@@ -1,0 +1,24 @@
+
+html,
+body,
+header,
+#intro{
+  height:100%;
+}
+#intro{
+  background: url("https://upload.wikimedia.org/wikipedia/commons/8/8a/Computer_lab_1.jpg")no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+."mask flex-center rgba-purple-strong"{
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width : 100%;
+
+}
+

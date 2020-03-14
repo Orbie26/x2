@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<title>View lab stats</title>
+
+{% endblock %}
+
+{% block body %}
+<!-- <div class='justify-content-center  align-items-center'>
+<img src="{% url 'graph' %}" alt="My image"/>
+</div> -->
+<div class="container h-100 d-flex justify-content-center">
+    <div class="jumbotron my-auto">
+      <h1 class="display-3">View statistics</h1>
+      <form method='post'>
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit" name="submit" class="btn btn-primary mx-auto">CALCULATE</button>
+      </form>
+      <div class="container">
+          <div class='row'>
+              <div class='col-lg'>
+                <img src="{% url 'graph' %}" alt="statistics"/>
+              </div>
+          </div>
+      </div>
+    </div>
+</div>
+{% endblock %}

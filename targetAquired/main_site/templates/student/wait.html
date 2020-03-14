@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+
+    {% block head %}
+    <title>Ask question</title>
+
+    {% endblock %}
+
+    {% block style %}
+    <!-- .button_row {
+    padding: 0 64px;
+    height: 100%;
+    width: 100%;
+    }
+
+    .question {
+    text-align: center;
+    }
+
+    .question_text {
+    text-align: center;
+    font-size: 4rem;
+    padding: 48px 0;
+    }
+
+    .question_button {
+    text-align: center;
+    font-size: 6rem;
+    min-width: 90%;
+    background-color: #e9c71d;
+    opacity: 0.9;
+    border-radius: 16px;
+    color: purple;
+    }
+    .question_button:hover {
+    border-color: #e9c71d;
+    background-color: #ffffcc;
+    border-width: 3px;
+    opacity: 0.5;
+    } -->
+
+    .button_row {
+      height: 100%;
+      width:100%;
+    }
+
+    .btnn {
+      height: 24vh;
+      background-color: #65088a;
+      opacity: 0.8;
+      font-size: 2.7em;
+      border-radius: 16px;
+      color: white;
+      text-align: center;
+    }
+
+    .btnn:hover {
+      background-color: #9c23cc;
+      color: white;
+    }
+
+    .btn {
+      height: 24vh;
+      background-color: #65088a;
+      opacity: 0.8;
+      font-size: 2.7em;
+      border-radius: 16px;
+      color: white;
+      font-family: 'Baloo Tammudu 2', Sans-serif;
+      text-align: center;
+    }
+    .btn:hover {
+      background-color: #9c23cc;
+      color: white;
+      font-family: 'Baloo Tammudu 2', Sans-serif;
+    }
+    {% endblock %}
+
+    {% block body %}
+    <form method="post">
+        {% csrf_token %}
+    <div>
+        <!-- <h2 style = "font-family: 'Baloo Tammudu 2', Sans-serif;">Marking</h2> -->
+    <div class="button_row row justify-content-around">
+    {% if queries.mark.exists %}
+        <div class="question col-12 my-auto">
+        <div style="font-size:1.5em;" class="question_text">
+            There are {{ queries.mark.queue }} people ahead of you in the marking queue
+        </div>
+            <button name='cancel-mark' type="submit" class="col-4 btnn mx-auto">Cancel Marking</button>
+        </div>
+    {% else %}
+    <div style = "padding-top:5%;width:100%;padding-left:40%">
+    <button name="new-mark" class="btn col-4 my-auto">Request Marking</button>
+    {% endif %}
+    </div>
+    </div>
+    </div>
+    <div>
+      <!-- <div style = "text-align:center; padding-top: 2%; ">
+        <h2 style="text-align:center; font-size:1.5em;">Question</h2>
+        {% if queries.q.exists %}
+        <!-- <p>Question Asked: {{ queries.q.topic }}: {{ queries.q.body }}</p> -->
+        <!-- {% endif %} -->
+      </div>
+    <div class="button_row row justify-content-around">
+    {% if queries.q.exists %}
+      <div class="question col-12 my-auto">
+        <div style="text-align:center; font-size:1.5em;" class="question_text">
+            There are {{ queries.q.queue }} people ahead of you in the question queue
+        </div>
+            {% csrf_token %}
+            <button name= 'cancel-question' type="submit" class="col-4 btnn mx-auto">Cancel Question</button>
+      </div>
+    {% else %}
+    <div style = "padding-top:5%;width:100%;padding-left:40%">
+    <button name="new-question" class="btn col-4 my-auto">Ask a Question</button>
+    {% endif %}
+    </div>
+      </div>
+
+    </form>
+    {% endblock %}

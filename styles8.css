@@ -1,0 +1,120 @@
+html {
+    background-color: ##FFFFFF;
+}
+
+body{
+    margin: 0px;
+}
+header{
+    background-color: #FFFFFF;
+    position: absolute;
+    top:0%;
+    height: 10%;
+    width: 100%;
+    padding-bottom:20px;
+    margin: 0px;
+}
+
+footer{
+    position: bottom;
+    background-color: #1D1D1D;
+    height: 6%;
+    position: absolute;
+    top: 94%;
+    width: 100%;
+    padding-bottom:0px;
+    margin: 0px;
+}
+
+main{
+    height: 84%;
+    top:10%;
+    position: absolute;
+    width: 100%;
+    background-color: #ECECED;
+}
+
+h1  {
+    font-family: 'Odibee Sans', cursive;
+    font-size: 50px;
+    padding-left: 280px;
+    padding-top: 23px;
+    float: left;
+    margin: 0px;
+    color: #660099;
+}
+nav {
+    padding-top:30px;
+    padding-right:60px;
+    float: right;
+}
+.na {
+    color: #383B3C;
+    text-decoration: none;
+    font-family: 'Odibee Sans', cursive;
+    padding-top: 8px;
+    font-size: 34px;
+    text-align: middle;
+    padding-right: 100px;
+}
+.la {
+    color: #949699;
+    text-decoration: none;
+    padding-top: 8px;
+    font-size: 34px;
+    font-family: 'Odibee Sans', cursive;
+    text-align: middle;
+    padding-left: 25px;
+    padding-right: 100px;
+}
+
+.ba {
+    color: #949699;
+    text-decoration: none;
+    padding-top: 8px;
+    font-size: 34px;
+    font-family: 'Odibee Sans', cursive;
+    text-align: middle;
+    padding-left: 25px;
+    padding-right: 200px;
+}
+
+.lol {
+    border
+    background-color: #FFFFFF;
+    text-align: center;
+    position: fixed;
+    text-decoration: none;
+    top: 48%;
+    left: 55%;
+    width:25em;
+    height:20em;
+    font-family: 'Odibee Sans', cursive;
+    font-size: 30px;
+    color: #660099;
+    margin-top: -9em; /*set to a negative number 1/2 of your height*/
+    margin-left: -15em; /*set to a negative number 1/2 of your width*/
+}
+
+.lol8{
+  padding-top:
+}
+
+.bob {
+    text-decoration: none;
+}
+.lol6 {
+    text-align: center;
+    float:left;
+    padding-left: 500px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+
+.lol7 {
+    text-align: center;
+    float:left;
+    padding-left: 500px;
+    font-size: 20px;
+    color: #FFFFFF;
+}
